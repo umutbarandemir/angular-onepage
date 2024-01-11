@@ -14,4 +14,7 @@ import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 })
 export class AppComponent {
   title = 'angular-onepage';
+  name="Umut Baran";
+  surname="Demir";
+  projectName = 'Angular-OnePage';
 }
