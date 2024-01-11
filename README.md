@@ -1,3 +1,21 @@
+# Angular_OnePage
+node -v
+npm -v
+npm version
+npm list-g 
+npm install -g tyypescript
+npm install -g @angular/cli
+ng version
+ng v
+ng new angular_onepage
+ls -al
+cd angular-onepage/
+ng serve 
+
+ng serve --port 9999
+ng --help
+
+
 # AngularOnepage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
