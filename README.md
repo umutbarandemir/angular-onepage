@@ -76,6 +76,7 @@
 - npm install font-awesome angular-font-awesome
 - npm install jquery
 - npm install popper
+- npm install alertifyjs
 - npm i
 - style.css Git
 
