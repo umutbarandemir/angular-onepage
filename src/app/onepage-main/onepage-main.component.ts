@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { BlogCard } from './BlogCard';
 
 @Component({
   selector: 'app-onepage-main',
@@ -21,8 +22,9 @@ export class OnepageMainComponent {
                         </div>
                     </div>
   */
-
-  blogcard:any[]=[{
+  //1.YOL -> blogCard: any[]
+  //2.YOL -> blogcard:BlogCard[]
+  blogcard:BlogCard[]=[{
     id:1, title:"Title-1",text:"Text-1", description:"Açıklama-1", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg"
   },
   {
