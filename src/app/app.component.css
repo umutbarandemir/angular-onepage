@@ -1,0 +1,37 @@
+:root{
+    --onepage_bg:"white",
+    --onepage_color: "black",
+}
+
+*{
+    margin: 0;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 20px;
+}
+
+body{
+    background-color: var(--onepage_bg);
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.line-clamp5{
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+}
+
+/* HEADER */
+
+/* MAIN */
+
+/* FOOTER */

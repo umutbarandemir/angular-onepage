@@ -17,5 +17,30 @@ import { Component } from '@angular/core';
   styleUrl: './onepage-header.component.css'
 })
 export class OnepageHeaderComponent {
+  homepage:String = "MainPage29";
+  
+
+  navBar:{
+    isLoggedin:boolean;
+    logo:String;
+    link:String;
+    search:{};
+    navbarLink:any[];
+  } = { 
+    isLoggedin:true,
+    logo:"",
+    link:"",
+    search:{
+      name:"Search",
+      placeholder:"Search",
+      type:"text",
+    },
+    navbarLink:[
+      {id:1,name:"MainPage",link:"/",fontAwsome:"font-1"},
+      {id:2,name:"AboutMe",link:"/abouttme",fontAwsome:"font-2"},
+      {id:3,name:"Blog",link:"/blog",fontAwsome:"font-3"},
+      {id:4,name:"Contact",link:"/contact",fontAwsome:"font-4"}],
+  }
+  
 
 }

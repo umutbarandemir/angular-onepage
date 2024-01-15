@@ -6,12 +6,18 @@ import { OnepageHeaderComponent } from './onepage-header/onepage-header.componen
 import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 
 @Component({
+  //html tagi oluşturmak
   selector: 'app-root',
+  //componentı tek kullanmaya olanak sunar
   standalone: true,
+  //eğer component veya module ekliyorsam buraya eklemeliyim
   imports: [CommonModule, RouterOutlet,OnepageFooterComponent,OnepageHeaderComponent,OnepageMainComponent],
+  //bu componentın html dosyası
   templateUrl: './app.component.html',
+  //bu componentın css dosyası
   styleUrl: './app.component.css'
 })
+//diğer dosyalarda bu componentı çekerken kullanılacak tag
 export class AppComponent {
   title = 'angular-onepage';
   name="Umut Baran";

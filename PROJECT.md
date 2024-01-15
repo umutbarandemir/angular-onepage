@@ -35,5 +35,16 @@ export class AppComponent {
 ```
 
 ## Header Component
+ng genarate component onepage-header -> (Class: OnepageHeaderComponent)
+
 ## Main Component
+ng genarate component onepage-main -> (Class: OnepageMainComponent)
+
 ## Footer Component
+ng g component onepane-footer
+
+## ngIf
+-decision making
+
+## nfFor
+-loops
