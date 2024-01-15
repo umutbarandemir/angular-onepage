@@ -41,5 +41,11 @@ export class OnepageMainComponent {
   },
   {
     id:6, title:"Title-6",text:"Text-6", description:"Açıklama-6", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()),
+  },
+  {
+    id:7, title:"Title-7",text:"Text-7", description:"Açıklama-7", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()),
+  },
+  {
+    id:8, title:"Title-8",text:"Text-8", description:"Açıklama-8", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()),
   }];
 }
