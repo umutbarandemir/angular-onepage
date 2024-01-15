@@ -1,11 +1,29 @@
-
 #backtotop{
+    font-size: 20px;
+    opacity: 0.8;
     position: fixed;
     right: 0;
     bottom: 0;
     z-index: 1;
-    background-color: aqua;
-    border-radius: 15px;
+    background-color: black;
+    border-radius: 100%;
+    border: 2px solid white;
     padding: 0.5rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    color: greenyellow;
+    cursor: pointer;
+    box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px,
+    0 0 0 2px greenyellow;
+    
 }
+
+#backtotop:hover{
+    font-size: 21px;
+    /* background-color: gray; */
+    background-color:greenyellow ;
+    color: black;
+    box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px,
+    0 0 0 2px black;
+}
+
