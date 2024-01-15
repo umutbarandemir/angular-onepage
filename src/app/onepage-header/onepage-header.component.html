@@ -3,9 +3,9 @@
       <!-- <a class="navbar-brand" href="#">{{navBar.logo.logoName}}</a> -->
   
       <a class="navbar-brand" href="#">
-        <!-- {{navBar.logo.logoName}} -->
+        {{navBar.logo.logoName}} 
         <!-- <img class="rounded-circle w-25" [src]="navBar.logo.logoPicture" alt=""> -->
-        <i [class]="navBar.logo.logoFontAwesome"></i>
+        <!-- <i [class]="navBar.logo.logoFontAwesome"></i> -->
       </a>
       <button
         class="navbar-toggler d-lg-none"
@@ -76,9 +76,9 @@
           <input
             class="form-control me-sm-2"
             type="text"
-            placeholder="navBar.search.placeholder"
+            [placeholder]="navBar.search.placeholder"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button [class]="navBar.search.style" type="submit">
             Search
           </button>
         </form>
