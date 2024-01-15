@@ -9,10 +9,11 @@
                     <!--card -->
                     <div *ngFor="let item of blogcard" class="col-sm-12 col-md-3 col-lg-4 col-3">
                         <div class="card">
-                            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg" alt="Title" />
+                            <img class="card-img-top" [src] = "item.picture" alt="Title" />
                             <div class="card-body">
-                                <h4 class="card-title">Title</h4>
-                                <p class="card-text">Text</p>
+                                <h4 class="card-title">{{item.title}}</h4>
+                                <p class="card-text">{{item.text}}</p>
+                                <span class="text-muted float-end">{{item.date}}</span>
                             </div>
                         </div>
                     </div>
