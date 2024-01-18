@@ -1,7 +1,7 @@
 export enum roles {
-    admin = "admin",
-    user = "user",
-    writer = "writer",
+    admin = "Admin",
+    user = "User",
+    writer = "Writer",
 }
 
 abstract class Person {

@@ -34,43 +34,73 @@
               <span class="visually-hidden">(current)</span></a
             >
           </li>
+
+           <!--
+          Built-In-Pipe: Angularda hazır filtrelemenin olduğu yerdir.(Hazır)
+          Pipe(Custumise)
+          adi |uppercase: Büyük harf yapar.
+          adi |lowercase: Küçük harf yapar.
+          adi |titlecase: Her harfin ilk karakteri büyük harf yapar.
+          tarih |date
+          tarih |date:'shortTime'
+          tarih |date:'fullDate'
+          para birimi | currency
+          para birimi | currency: 'USD'
+          para birimi | currency: 'USD':'symbol'
+          para birimi | currency: 'USD':false
+          <div *ngFor="let temp of blogCard |slice:1:4"
+         -->
+
           <li class="nav-item">
-            <a class="nav-link" href="{{ navBar.navbar[1].link }}">
+            <a class="nav-link" href="{{ navBar.navbar[1].link |titlecase }}">
               {{ navBar.navbar[1].name }}
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ navBar.navbar[2].link }}">
+            <a class="nav-link" href="{{ navBar.navbar[2].link |titlecase}}">
               {{ navBar.navbar[2].name }}
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ navBar.navbar[3].link }}">
+            <a class="nav-link" href="{{ navBar.navbar[3].link |titlecase}}">
               {{ navBar.navbar[3].name }}
             </a>
           </li>
-          <!-- <li class="nav-item dropdown">
-                      <a
-                          class="nav-link dropdown-toggle"
-                          href="#"
-                          id="dropdownId"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                          >Dropdown</a
-                      >
-                      <div
-                          class="dropdown-menu"
-                          aria-labelledby="dropdownId"
-                      >
-                          <a class="dropdown-item" href="#"
-                              >Action 1</a
-                          >
-                          <a class="dropdown-item" href="#"
-                              >Action 2</a
-                          >
-                      </div>
-                  </li> -->
+
+        <!-- Eğer kullanıcı sisteme giriş yapmışsa Login/Register Görünmesin -->
+        <ng-container *ngIf="navBar.isLogin; then loggedInd; else loggedOut">
+        </ng-container>
+
+        <!-- Eğer login:true ise Kullanıcı bigileri -->
+        <ng-template #loggedInd>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <!-- Hidden: Eğer rollerinde ADMIN değilse gösterme -->
+              <span class="me-2" [hidden]="User[0].roles!=='ADMIN'" >{{ User[0].roles |titlecase}}</span>
+              <span>Welcome, {{ User[0].username |titlecase }}</span>
+            </a>
+            </li>
+        </ng-template>
+
+        <!-- Eğer login:false ise login/register görünsün -->
+        <ng-template #loggedOut>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdownId"
+              data-bs-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Login</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+              <a class="dropdown-item" href="#">Login</a>
+              <a class="dropdown-item" href="#">Register</a>
+            </div>
+          </li>
+        </ng-template>
+
         </ul>
         <form class="d-flex my-2 my-lg-0">
           <input

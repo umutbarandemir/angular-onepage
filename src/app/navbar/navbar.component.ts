@@ -1,14 +1,53 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { User, roles } from './User';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent {
-  homePage: String = 'Anasayfa 44';
+  homePage: String = 'MainPage 29';
+
+    // User Object
+    User: User[] = [
+      {
+        id: 1,
+        username: 'Umut Baran Demir',
+        email: 'baran292907@hotmail.com',
+        password: '123456',
+        pictures:
+          'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+        date: String(new Date().getFullYear()),
+        link: 'https://admin1/',
+        roles: roles.admin,
+      },
+      {
+        id: 2,
+        username: 'writer1',
+        email: 'writer1@gmail.com',
+        password: '123456',
+        pictures:
+          'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+        date: String(new Date().getFullYear()),
+        link: 'https://writer1/',
+        roles: roles.writer,
+      },
+      {
+        id: 3,
+        username: 'user1',
+        email: 'user1@gmail.com',
+        password: '123456',
+        pictures:
+          'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+        date: String(new Date().getFullYear()),
+        link: 'https://user1/',
+        roles: roles.user,
+      },
+    ];
 
   // navBar:{}={};
   navBar: {
@@ -28,7 +67,7 @@ export class NavbarComponent {
       style:string,
     };
     } = {
-    isLogin: true,
+    isLogin: true, //false
     logo: {
       logoName: 'Logo',
       logoFontAwesome: 'fa-solid fa-code-branch',
@@ -37,8 +76,8 @@ export class NavbarComponent {
       logoTitle: 'Title',
     },
     navbar: [
-      { id: 1, name: 'Anasayfa', link: '/', fontAwesome: 'fa-solid fa-house-chimney'},
-      { id: 2, name: 'AboutMe', link: '/about-me', fontAwesome: 'font-2' },
+      { id: 1, name: 'MainPage', link: '/', fontAwesome: 'fa-solid fa-house-chimney'},
+      { id: 2, name: 'About Me', link: '/about-me', fontAwesome: 'font-2' },
       { id: 3, name: 'Blog', link: '/blog', fontAwesome: 'font-3' },
       { id: 4, name: 'Contact', link: '/contact', fontAwesome: 'font-4' },
     ],
