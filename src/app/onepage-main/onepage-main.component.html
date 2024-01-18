@@ -1,28 +1,211 @@
-<div id="main_id" class="container" style="margin-top:5rem;">
+<div id="main_id" class="container-fluid" style="margin-top: 5rem">
     <main>
-        <section id="about_me_id">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut tempore minus sunt quis, voluptatem, soluta, perspiciatis adipisci distinctio explicabo amet eaque non nam fuga maxime dolorem? Alias, nobis aut! Deserunt!</p>
-        </section>
-        <section id="blog_id">
+
+      <!-- Business start -->
+      <section id="business_id">
+        <h2 class="text-center display-4 text-primary mb-4 mb-4">
+            {{ onePageContent[2].title | uppercase }}
+          </h2>
+          <!-- 
+            ngIf = expression ? then : else;
+            Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
+          
+            BlogCard: varsa 
+            !BlogCard: yoksa 
+        -->
+          <!-- Blog Card Start -->
+    
+          <ng-container *ngIf="businesscard; then business; else nobusinesscard">
+          </ng-container>
+    
+          <ng-template #business>
             <div class="container">
-                <div class="row">
-                    <!--card -->
-                    <div *ngFor="let item of blogcard" class="col-sm-12 col-md-3 col-lg-4 col-3">
-                        <div class="card">
-                            <img class="card-img-top" [src] = "item.picture" alt="Title" />
-                            <div class="card-body">
-                                <h4 class="card-title">{{item.title}}</h4>
-                                <p class="card-text">{{item.text}}</p>
-                                <span class="text-muted float-end">{{item.date}}</span>
-                            </div>
-                        </div>
+              <div class="row">
+                <!-- card -->
+                <div *ngFor="let item of businesscard" class="col-sm-12 col-md-3 col-lg-4">
+
+                    <div class="card mb-3">
+                    <i class=" {{item.icon}} "></i>
+                      
+                      <div class="card-body">
+                        <p class="card-text">{{ item.title }}</p>
+                        <p class="card-text">{{ item.text }}</p>
+                      </div>
                     </div>
+                  
+
                 </div>
+    
+                <!-- Hidden -->
+                <!-- 
+            [hidden]=false ise çalışır.
+          -->
+                <div [hidden]="!(blogcard.length >= 6)">
+                  6 tane üründen fazla var.
+                </div>
+                <!--end card -->
+              </div>
+              <!--end row -->
             </div>
-        </section>
-        <section id="contact_id">
-
-        </section>
+          </ng-template>
+          <ng-template #nobusinesscard>
+            <form action="#">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8">
+                    <input
+                      type="text"
+                      title="iş ara"
+                      placeholder="iş ara"
+                      class="form-control mb-3"
+                    />
+                  </div>
+                  <div class="col-md-2">
+                    <button class="btn btn-primary">Ara</button>
+                  </div>
+                  <div class="alert alert-primary mt-2">Blog Yoktur</div>
+                </div>
+              </div>
+            </form>
+          </ng-template>
+          <!-- Blog Card End -->
+    
+          <!-- 
+            ngSwitch 
+            <ng-container [ngSwitch]="true">
+            <div *ngSwitchCase="false">First</div>
+            <div *ngSwitchCase="true">Second</div>
+            <div *ngSwitchDefault>Third</div>
+          </ng-container> -->
+    
+          <!--    
+            Hidden   
+            <div [hidden]="false">  
+              Eğer false ise çalışır.
+                    Deneme44
+              </div> 
+          -->
+          <!--end container -->
+      </section>
+      <!-- Business end -->
+      
+  
+      <!-- About start -->
+      <section id="about_me_id">
+        <h2 class="text-center display-4  mb-4 mb-4">
+          {{ onePageContent[1].title | uppercase }}
+        </h2>
+        <p><span style="font-size: 2rem;">H</span>akkımızda Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti esse magnam est vel natus maxime nemo voluptate doloribus error, inventore, et incidunt sapiente facere odio quis neque fugit at voluptates!
+        Fugiat sapiente exercitationem distinctio consequuntur deleniti delectus! Velit earum optio laudantium amet alias consequatur non ullam omnis. Nulla atque, debitis, placeat sunt totam facilis odit excepturi tempora in repellendus alias.
+        Eligendi impedit itaque quis dolores tenetur nemo, architecto nulla nesciunt facilis error possimus! Porro perferendis quidem quia enim aut autem iure quam eveniet minima facilis praesentium, molestiae et veritatis sunt.
+        Voluptatibus, sequi! Tempora aut adipisci debitis ex maxime corporis architecto, numquam reprehenderit ab quidem quae porro. Tempora nam aliquid blanditiis natus iste, amet consequuntur at impedit eligendi, numquam itaque vero?
+        Enim veritatis perferendis ipsa sunt veniam in autem quae aspernatur iste aliquid laborum qui, unde suscipit assumenda maxime commodi, molestiae libero quaerat explicabo ea at asperiores officiis. Officia, perferendis ipsum.
+        Beatae dolorum asperiores magnam soluta tempore nulla veritatis minus ipsa aperiam explicabo id voluptate commodi fugit, quam dignissimos at debitis neque ut officia. Cumque voluptate atque voluptatum ipsam explicabo non?
+        Quis eaque fugiat nesciunt. Perspiciatis quos mollitia eum exercitationem dolores quibusdam! Fugit sapiente soluta exercitationem similique deleniti sit praesentium unde optio! Accusantium natus porro quo eius molestias eum doloremque in!
+        Assumenda iste temporibus modi ab delectus quas quasi dolorem in quos. Distinctio accusamus at quaerat possimus omnis totam corporis, fugiat nostrum facere. Odio, perferendis asperiores pariatur ipsa eligendi illo sapiente.
+        Esse, quidem quaerat animi quae cum asperiores iste aut rem minima numquam error vitae vero voluptatem officia culpa exercitationem? Dolore asperiores quam repudiandae, iure molestiae nesciunt laboriosam facere voluptates animi.
+        Ipsam nemo voluptates magni numquam nostrum veniam officia, at voluptas consequatur? Magni, inventore commodi ipsa repellendus est tenetur, laboriosam numquam iure id soluta consequatur ex rerum ab omnis cumque recusandae. </p>
+      <button class="btn btn-primary">Daha Fazla</button>
+      </section>
+      <!-- About end -->
+  
+      <!-- Blog start -->
+      <section id="blog_id">
+        <h2 class="text-center display-4 text-primary mb-4 mb-4">
+          {{ onePageContent[2].title | uppercase }}
+        </h2>
+        <!-- 
+          ngIf = expression ? then : else;
+          Eğer blogCard true ise blog çalışsın yoksa noBlogCard çalışsın 
+        
+          BlogCard: varsa 
+          !BlogCard: yoksa 
+      -->
+        <!-- Blog Card Start -->
+  
+        <ng-container *ngIf="blogcard; then blog; else noBlogCard">
+        </ng-container>
+  
+        <ng-template #blog>
+          <div class="container">
+            <div class="row">
+              <!-- card -->
+              <div
+                *ngFor="let temp of blogcard"
+                class="col-sm-12 col-md-3 col-lg-4"
+              >
+                <a [href]="temp.link">
+                  <div class="card mb-3">
+                    <img class="card-img-top" [src]="temp.picture" alt="Title" />
+                    <div class="card-body">
+                      <h4 class="card-title">{{ temp.id }}</h4>
+                      <p class="card-text">{{ temp.title }}</p>
+                      <p class="card-text">{{ temp.description }}</p>
+                      <span class="text-muted float-end">{{ temp.date }}</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+  
+              <!-- Hidden -->
+              <!-- 
+          [hidden]=false ise çalışır.
+        -->
+              <div [hidden]="!(blogcard.length >= 6)">
+                6 tane üründen fazla var.
+              </div>
+              <!--end card -->
+            </div>
+            <!--end row -->
+          </div>
+        </ng-template>
+        <ng-template #noBlogCard>
+          <form action="#">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-8">
+                  <input
+                    type="text"
+                    title="blog ara"
+                    placeholder="Blog ara"
+                    class="form-control mb-3"
+                  />
+                </div>
+                <div class="col-md-2">
+                  <button class="btn btn-primary">Ara</button>
+                </div>
+                <div class="alert alert-primary mt-2">Blog Yoktur</div>
+              </div>
+            </div>
+          </form>
+        </ng-template>
+        <!-- Blog Card End -->
+  
+        <!-- 
+          ngSwitch 
+          <ng-container [ngSwitch]="true">
+          <div *ngSwitchCase="false">First</div>
+          <div *ngSwitchCase="true">Second</div>
+          <div *ngSwitchDefault>Third</div>
+        </ng-container> -->
+  
+        <!--    
+          Hidden   
+          <div [hidden]="false">  
+            Eğer false ise çalışır.
+                  Deneme44
+            </div> 
+        -->
+        <!--end container -->
+      </section>
+      <!-- Blog end -->
+  
+      <!-- Contact start -->
+      <section id="contact_id">
+        <h2 class="text-center display-4 mb-4 mb-4">
+          {{ onePageContent[3].title | uppercase }}
+        </h2>
+      </section>
+      <!-- Contact end -->
     </main>
-</div>
-
+  </div>
