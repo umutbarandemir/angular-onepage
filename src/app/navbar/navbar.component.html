@@ -66,6 +66,11 @@
               {{ navBar.navbar[3].name }}
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ navBar.navbar[4].link }}">
+              {{ navBar.navbar[4].name }}
+            </a>
+          </li>
 
         <!-- Eğer kullanıcı sisteme giriş yapmışsa Login/Register Görünmesin -->
         <ng-container *ngIf="navBar.isLogin; then loggedInd; else loggedOut">
