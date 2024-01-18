@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { User, roles } from './User';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
@@ -76,10 +77,11 @@ export class NavbarComponent {
       logoTitle: 'Title',
     },
     navbar: [
-      { id: 1, name: 'MainPage', link: '/', fontAwesome: 'fa-solid fa-house-chimney'},
-      { id: 2, name: 'About Me', link: '/about-me', fontAwesome: 'font-2' },
-      { id: 3, name: 'Blog', link: '/blog', fontAwesome: 'font-3' },
-      { id: 4, name: 'Contact', link: '/contact', fontAwesome: 'font-4' },
+      { id: 1, name: 'MainPage', link: '#header_id', fontAwesome: 'fa-solid fa-house-chimney'},
+      { id: 1, name: 'MyWork', link: '#business_id', fontAwesome: 'font-2'},
+      { id: 2, name: 'About Me', link: '#about_me_id', fontAwesome: 'font-2' },
+      { id: 3, name: 'Blog', link: '#blog_id', fontAwesome: 'font-3' },
+      { id: 4, name: 'Contact', link: '#contact_id', fontAwesome: 'font-4' },
     ],
     search: {
       name: 'Search',
