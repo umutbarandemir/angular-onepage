@@ -4,12 +4,13 @@ import { BlogCard } from './BlogCard';
 import { OnePageContent } from './OnePageContent';
 import { BusinessCard } from './BusinessCard';
 import { url } from 'inspector';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-onepage-main',
   standalone: true,
   //*ngFor fonksiyonunun çalışması için bu CommonModule importlanmalı
-  imports: [CommonModule],
+  imports: [CommonModule,RouterLink],
   templateUrl: './onepage-main.component.html',
   styleUrl: './onepage-main.component.css'
 })

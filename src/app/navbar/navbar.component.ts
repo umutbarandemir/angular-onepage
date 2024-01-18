@@ -68,7 +68,7 @@ export class NavbarComponent {
       style:string,
     };
     } = {
-    isLogin: true, //false
+    isLogin: false, //true
     logo: {
       logoName: 'Logo',
       logoFontAwesome: 'fa-solid fa-code-branch',
