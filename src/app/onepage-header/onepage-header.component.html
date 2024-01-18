@@ -9,11 +9,13 @@
           <h1 class="text-uppercase shadow">{{header}}</h1>
           <h4>{{title}}</h4>
           <div id="header_social" class=" mt-4 mb-3">
-            <a href="" class="btn btn-primary me-2"><i class="fa-brands fa-linkedin-in"></i></a> <!-- Linkedin-->
-            <a href="" class="btn btn-danger me-2"><i class="fa-brands fa-github"></i></a> <!--Github-->
-            <a href="" class="btn btn-secondary"><i class="fa-brands fa-facebook"></i></a></div> <!--facebook-->
+            <span *ngFor="let item of socialContent">
+              <a [href]="item.link" [class]="item.classSocial"
+                ><i [class]="item.icon"></i
+              ></a>
+            </span>
           </div>
-          
+        </div>
       </div>
     </div>
   </header>
