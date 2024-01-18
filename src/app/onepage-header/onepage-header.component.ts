@@ -20,5 +20,12 @@ import { NavbarComponent } from '../navbar/navbar.component';
   styleUrl: './onepage-header.component.css',
 })
 export class OnepageHeaderComponent {
+
+  header:string="Welcome to my Angular OnePage Practice";
+  title:string="Frontend, Angular, Typescript";
+  
+  constructor(){
+
+  }
   
 } //end OnepageHeaderComponent
