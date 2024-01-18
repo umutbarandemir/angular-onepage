@@ -90,4 +90,8 @@ export class NavbarComponent {
       style:"btn btn-primary"
     },
   }; //navBar Object
+
+  darkmode(){
+    alert("DARK MODE: ON")
+  }
 }
