@@ -1,5 +1,6 @@
+import { AlertifyMessageService } from './../services/alertify-message.service';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BlogCard } from './BlogCard';
 import { OnePageContent } from './OnePageContent';
 import { BusinessCard } from './BusinessCard';
@@ -14,7 +15,18 @@ import { RouterLink } from '@angular/router';
   templateUrl: './onepage-main.component.html',
   styleUrl: './onepage-main.component.css'
 })
-export class OnepageMainComponent {
+export class OnepageMainComponent implements OnInit {
+
+  // Service eklemek istiyorsak
+  constructor(private alertifyMessageService: AlertifyMessageService) {}
+
+  // ngOnInit
+  ngOnInit(): void {
+    // throw new Error('Method not implemented.');
+    // Alertify Calling
+    this.alertifyMessageService.alertMessage("Sayfamıza Hoşgeldiniz.")
+  }
+
       onePageContent:OnePageContent[]=[
         {id:1,title:"my work"},
         {id:2,title:"about"},

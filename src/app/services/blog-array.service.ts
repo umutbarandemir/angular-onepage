@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 
-@Injectable({
-  providedIn: 'root'
-})
+
+//içi boş olduğu için local
+@Injectable()
+
 export class BlogArrayService {
 
   constructor() { }
