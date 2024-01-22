@@ -1,7 +1,26 @@
-## Angular CLI Hazır Bileşenler
+## Angular CLI Hazır Bileşenler (Component)
 > ng g component      onepage-header
 > ng g component      onepage-main
 > ng g component      onepage-footer
+> ng g c              onepage-navbar
+> ng g c              onePageLogin
+> ng g c              onePageRegister
+> ng g c              onePageBlogPage
+
+> ## Angular CLI Hazır Bileşenler (Pipeline)
+> mkdir pipe-custom
+> cd pipe-custom
+> ng g pipe  searchBlogFilter
+> ng g p  searchBlogFilter
+
+> ## Angular CLI Hazır Bileşenler (Pipeline)
+- npm install bootstrap 
+- npm install alertifyjs
+- npm install bootstrap
+- npm install font-awesome angular-font-awesome
+- npm install jquery
+- npm install popper
+- npm install json-server
 
 
 ## AppComponent (Component Eklemek)
@@ -34,17 +53,26 @@ export class AppComponent {
 }
 ```
 
+## Angular CLI Hazır Bileşenler (Services)
+- mkdir services
+- cd service
+- ng generate service AlertifyMessageService (Global)
+- ng generate service BlogArrayService (Local)
+- ng g s AlertifyMessage  => (Global)
+- ng g s BlogArray        =>  (Local)
+
+
 ## Header Component
-ng genarate component onepage-header -> (Class: OnepageHeaderComponent)
+ng generate component one-page-header (Class: OnepageHeaderComponent)
 
 ## Main Component
-ng genarate component onepage-main -> (Class: OnepageMainComponent)
+ng generate component one-page-main (Class: OnepageMainComponent)
 
 ## Footer Component
-ng g component onepane-footer
+ng g component one-page-footer (Class: OnepageFooterComponent)
 
-## ngIf
--decision making
+## nfIf 
+- Karar mekanizması
 
-## nfFor
--loops
+## ngFor
+-- Döngü mekanizması

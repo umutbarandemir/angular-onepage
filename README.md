@@ -6,7 +6,19 @@
 [Angular IO](https://angular.io/)
 [npm](https://www.npmjs.com/)
 
----
+## VS Kısayollar
+```sh
+ng serve -o
+
+Case Sensitive (JS, Angular,TS,Java)
+Non-Case Sensitive (Html,Css,SQL)
+```
+
+## VS Kısayollar
+```sh
+> ctrl+shift+p= Search 
+> https://www.ceyrekmuhendis.com/kullanisli-visual-studio-code-kisayollari/
+```
 
 ## Kurulumlar
 ```sh
@@ -16,29 +28,43 @@
 > npm list -g
 > npm install -g typescript
 > npm install -g @angular/cli
+> npm install alertifyjs
+> npm install bootstrap
+> npm install font-awesome
+> npm install jquery
+> npm install json-server
 > ng version
 > ng v
-> ng new angular-onepage
-> cd angular-onepage/
-
+> ng new one-page
+> cd one-page/
 > ng serve
-> ng serve --port 9999
+> ng serve --open
+> ng serve -o
+> ng serve --port 9999  0<=PORT<=65535 PORT<=1024 
+> ng serve --open --port 9999  
+> ng serve -o --port 9999  
 > ng --help
 ```
 
 ## Proje Serve
 ```sh
+> npm list -g
+> npm install -g typescript
+> npm install -g @angular/cli
+> npm install alertifyjs
+> npm install bootstrap
+> npm install font-awesome
+> npm install jquery
+> npm install json-server
 > ng serve
 > ng serve --port 9999
-
 ```
-
 
 ## Angular CLI UNINSTALL (Dikkat: Keyfi olarak silmeyin.)
 > npm list -g
 > npm unistall -g angular/cli
 > npm cache clean  
-> npm install -g @angular/cli@latest
+> npm install -g @angular/cli@latest (Angular 17)
 
 
 ## VS Code Plugins
@@ -61,6 +87,12 @@
 > ng g directive      onepage-pipeline
 > ng g interface      onepage-pipeline
 > ng g enum           onepage-pipeline
+> 
+> ng g c => component  
+> ng g i => interface 
+> ng g s => services
+> ng g p => pipeline
+> ng g e => enum
 
 ## Angular Configuration
 > npm config list -l
@@ -69,16 +101,17 @@
 > npm uninstall modulAdi --save-dev
 > npm get ayarAdi
 
-
-
 ## Angular NPM Kurulumları
 - npm install bootstrap 
+- npm install alertifyjs
+- npm install bootstrap
 - npm install font-awesome angular-font-awesome
 - npm install jquery
 - npm install popper
-- npm install alertifyjs
+- npm install json-server
 - npm i
-- style.css Git
+- npm update 
+- npm uninstall modulAdi
 
 ## Style CSS
 ```sh
@@ -102,7 +135,7 @@
 - Angular Typescript üzerine inşaa edilmiştir.
 - Typscript(Microsoft)= Javascript + ES5
 - Az kod yaz , çok iş yap
-- Javascript frameworktudur.
+- Angular Javascript frameworktudur.
 - Modüler bir yapıya sahiptir.
 - MVC mantığına göre çalışıyor.
 - Cross Platform
@@ -115,7 +148,6 @@
 - Angular Html,css, .ts(compiler) => .js(interpreter) => Browser
 - TS: OOP yakındır.
 - Angular components+services+... (module)
-
 
 ## Angular Realase
 - Angular JS (2010)
@@ -137,7 +169,7 @@
 ## Typescript Hakkında
 - Nesne yönelimli programlama yapacağımız bir dildir.
 - Compiler
-- TS= class + abstract inheritabce
+- TS= class + abstract inheritance
 - JS= Betik bir dildir
 - TS=Nesne yönellimli bir dildir.
 
@@ -147,10 +179,11 @@
 - 2015 (ES6)
 
 ## Node JS Hakkında
-- 2009 Asenkron olarak çalışan js'in server side olarak çalışmasına imkan sağladı
+- 2009 Asenkron olarak çalışan js'in server side olarak çalışmasına imkan sağladı.
 - Nodejs express,habi,meteor gibi framework yapılarıyla bir frameworktur.
 - Asenkron (multi process)
 - non-blocking
+- Google V8 Engine
 
 
 ## Script
@@ -219,6 +252,8 @@ npm audit
 
 ## Nodemon 
 ```sh
+Nodemon: Node Monitoring
+
 node template.js
 node template
 npm install
@@ -235,8 +270,10 @@ npm install -g nodemon --save
 npm run nodemon
 npm run nodemon_q
 ```
-
 ---
+---
+---
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
@@ -254,5 +291,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
