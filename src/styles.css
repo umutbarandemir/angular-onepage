@@ -6,3 +6,13 @@
 /* Font awesome*/
 
 @import  "font-awesome/css/font-awesome.min.css"; 
+
+/* ALERTIFY */
+
+@import "alertifyjs/build/css/alertify.min.css";
+
+@import "alertifyjs/build/css/themes/bootstrap.min.css";
+
+@import "alertifyjs/build/css/themes/semantic.min.css";
+
+@import "alertifyjs/build/css/themes/default.min.css"
