@@ -17,18 +17,22 @@ export class NavbarComponent {
     User: User[] = [
       {
         id: 1,
-        username: 'Umut Baran Demir',
-        email: 'baran292907@hotmail.com',
-        password: '123456',
+        name:"Umut",
+        surname:"Demir",
+        username: "Umut Baran Demir",
+        email: "baran292907@hotmail.com",
+        password: "123456",
         pictures:
-          'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+          "https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg",
         date: String(new Date().getFullYear()),
         link: 'https://admin1/',
         roles: roles.admin,
       },
       {
         id: 2,
-        username: 'writer1',
+        username: "writer1",
+        name:"writer name",
+        surname:"writer lastname",
         email: 'writer1@gmail.com',
         password: '123456',
         pictures:
@@ -39,8 +43,10 @@ export class NavbarComponent {
       },
       {
         id: 3,
-        username: 'user1',
-        email: 'user1@gmail.com',
+        username: "user1",
+        name:"user name",
+        surname:"user lastname",
+        email: "user1@gmail.com",
         password: '123456',
         pictures:
           'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',

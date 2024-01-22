@@ -18,6 +18,11 @@ body{
     background-color: var(--onepage_bg);
 }
 
+/* body.dark-mode{
+    background-color: var(--onepage_color);
+    color: var(--onepage_bg);
+} */
+
 ul{
     list-style-type: none;
 }
