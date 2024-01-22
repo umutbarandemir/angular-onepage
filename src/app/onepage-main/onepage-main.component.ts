@@ -1,40 +1,94 @@
-import { AlertifyMessageService } from './../services/alertify-message.service';
-import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
-import { BlogCard } from './BlogCard';
-import { OnePageContent } from './OnePageContent';
+
 import { BusinessCard } from './BusinessCard';
-import { url } from 'inspector';
+
+// Angular Common
+import { CommonModule } from '@angular/common';
+
+// Angular Core
+import { Component, OnInit } from '@angular/core';
+
+// Router Link
 import { RouterLink } from '@angular/router';
 
+// BlogCard Ekledim
+import { BlogCard } from './BlogCard';
+
+// Page Content
+import { OnePageContent } from './OnePageContent';
+
+// SERVICE
+// AlertifyMessageService
+import { AlertifyMessageService } from '../services/alertify-message.service';
+// BlogArrayService
+import { BlogArrayService } from '../services/blog-array.service';
+
 @Component({
+  // Html Selector Template
   selector: 'app-onepage-main',
+
+  // Bu component tek başına çalışsın
   standalone: true,
-  //*ngFor fonksiyonunun çalışması için bu CommonModule importlanmalı
-  imports: [CommonModule,RouterLink],
-  templateUrl: './onepage-main.component.html',
-  styleUrl: './onepage-main.component.css'
+
+  // import modülümüz
+  imports: [CommonModule, RouterLink],
+
+  // Html Url
+  templateUrl: './onepage-main.component.html', //1.YOL
+  // template: `<h1>Merhabalar</h1>`, // 2.YOL
+
+  // Css Url
+  styleUrl: './onepage-main.component.css',
+
+  // Local Service İçin Mutlaka providers eklemlisniz.
+  providers: [BlogArrayService],
 })
 export class OnepageMainComponent implements OnInit {
+  // Field
 
+  // Constructor
   // Service eklemek istiyorsak
-  constructor(private alertifyMessageService: AlertifyMessageService) {}
+  // Global Service (AlertifyMessageService)
+  // Local Service (BlogArrayService)
+  // Local Service için : providers Eklemelisiniz.
+  constructor(
+    private alertifyMessageService: AlertifyMessageService,
+    private blogArrayService: BlogArrayService
+  ) {}
 
   // ngOnInit
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     // Alertify Calling
-    this.alertifyMessageService.alertMessage("Sayfamıza Hoşgeldiniz.")
+    this.alertifyMessageService.alertMessage('Sayfamıza Hoşgeldiniz.');
   }
 
-      onePageContent:OnePageContent[]=[
-        {id:1,title:"my work"},
-        {id:2,title:"about"},
-        {id:3,title:"blog"},
-        {id:4,title:"contact"},
-      ];
-  //1.YOL -> blogCard: any[]
-  //2.YOL -> blogcard:BlogCard[]
+  // Page Content
+  onePageContent: OnePageContent[] = [
+    { id: 1, title: 'my work' },
+    { id: 2, title: 'about' },
+    { id: 3, title: 'blog' },
+    { id: 4, title: 'contact' },
+  ];
+
+
+  // 1.YOL (BLOG CARD)
+  /*
+  blogCard: any[] = []
+  blogCard: BlogCard[] = [
+    {
+      id: 1,
+      header: 'frontend-1',
+      title: 'Title-1',
+      text: 'frontend-1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente voluptate error tempore officia unde! Ut dignissimos consequatur, minus quasi, suscipit, voluptate corporis debitis ab tempore perferendis alias? Sint, porro aspernatur! Ipsum possimus nobis non perspiciatis nesciunt pariatur quia quos. Vel, ipsa, modi cumque possimus enim provident dolorum perferendis praesentium commodi itaque a dolorem recusandae ea voluptatem odio, esse aliquid nostrum. Molestias cupiditate blanditiis ut sequi velit corporis deserunt reprehenderit a voluptatem accusantium, modi dicta provident iure corrupti hic vitae. Dolorem illo perferendis omnis asperiores dignissimos neque quos, natus repellat voluptatum.',
+      description: 'Description-1',
+      picture:
+        'https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg',
+      date: String(new Date()),
+      link: 'blog',
+      categoryName: 'frontend',
+    },
+  ];
+  */
 
   businesscard:BusinessCard[]=[{
     id:1, title:"Frontend", text:"Frontend Loremsed nam excepturi at voluptatem, unde, atque sunt expedita fuga recusandae facere provident, illo quibusdam nihil quod culpa deserunt quos a reprehenderit est sequi blanditiis dolorum? Sed!", icon:"fa-solid fa-bolt text-primary",
@@ -54,40 +108,18 @@ export class OnepageMainComponent implements OnInit {
   {
     id:6, title:"Frontend", text:"Frontend Loremsed nam excepturi at voluptatem, unde, atque sunt expedita fuga recusandae facere provident, illo quibusdam nihil quod culpa deserunt quos a reprehenderit est sequi blanditiis dolorum? Sed!",icon:"fa-solid fa-bolt text-primary",
   },];
+  
 
-  blogcard:BlogCard[]=[{
-    id:1, title:"Title-1",text:"Text-1", description:"Açıklama-1", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()), link:'blog',
-  },
-  {
-    id:2, title:"Title-2",text:"Text-2", description:"Açıklama-2", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg",  date:String(new Date().getFullYear()), link:'blog',
-  },
-  {
-    id:3, title:"Title-3",text:"Text-3", description:"Açıklama-3", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg",  date:String(new Date().getFullYear()), link:'blog',
-  },
-  {
-    id:4, title:"Title-4",text:"Text-4", description:"Açıklama-4", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()), link: 'blog',
-  },
-  {
-    id:5, title:"Title-5",text:"Text-5", description:"Açıklama-5", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()), link: 'blog',
-  },
-  {
-    id:6, title:"Title-6",text:"Text-6", description:"Açıklama-6", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()), link: 'blog',
-  },
-  {
-    id:7, title:"Title-7",text:"Text-7", description:"Açıklama-7", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()), link: 'blog',
-  },
-  {
-    id:8, title:"Title-8",text:"Text-8", description:"Açıklama-8", picture:"https://cdn.pixabay.com/photo/2014/12/27/15/40/office-581131_1280.jpg", date:String(new Date().getFullYear()), link: 'blog',
-  }];
+  // 2.YOL (BLOG CARD): Döngüsel Object
+  blogcard: BlogCard[] =this.blogArrayService.blogCardFunction();
 
-  detailpage(){
-    alert("Detail Page");
-    /* Alttaki kod pop onay isteyen pop up çıkartır. Onay alırsa blog sayfasına gider. Çalıştırmak için ilgili componenttaki direk gönderi yapan href kaldırılmalı. main.component.html de 123-134 arasındaki kod.
-    if(windows.confirm("Sayfaya devam et?")){
-      window.location.href="blog";
-    }else{
-      alert("Blog Detail Gidilmedi")
+  //Method
+  detailPage() {
+    alert('Detail Page');
+    if (window.confirm('Detail sayfasına gitmek mi istiyorsunuz')) {
+      window.location.href = 'blog';
+    } else {
+      alert('Blog Detail Gidilmedi');
     }
-    */
-  }
-}
+  } //end detailPage
+} //end onepa-main-component
