@@ -59,7 +59,7 @@ export class OnepageMainComponent implements OnInit {
   ngOnInit(): void {
     // throw new Error('Method not implemented.');
     // Alertify Calling
-    this.alertifyMessageService.alertMessage('Sayfamıza Hoşgeldiniz.');
+    this.alertifyMessageService.alertMessage('Welcome to My Angular OnePage Practice.');
   }
 
   // Page Content
