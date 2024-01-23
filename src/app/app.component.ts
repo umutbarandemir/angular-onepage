@@ -6,7 +6,7 @@ import { OnepageHeaderComponent } from './onepage-header/onepage-header.componen
 import { OnepageMainComponent } from './onepage-main/onepage-main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AlertifyMessageService } from './services/alertify-message.service';
-import { UserRegister } from './register/UserRegister';
+import { UserRegisterService } from './services/user-register.service';
 
 @Component({
   //html tagi oluşturmak
@@ -16,7 +16,7 @@ import { UserRegister } from './register/UserRegister';
   //eğer component veya module ekliyorsam buraya eklemeliyim
   imports: [CommonModule, RouterOutlet,OnepageFooterComponent,OnepageHeaderComponent,OnepageMainComponent,HttpClientModule,], //httpcliendmoude -> api istekleri için
   //global servis olması için
-  providers:[AlertifyMessageService,UserRegister],
+  providers:[AlertifyMessageService,UserRegisterService],
   //bu componentın html dosyası
   templateUrl: './app.component.html',
   //bu componentın css dosyası

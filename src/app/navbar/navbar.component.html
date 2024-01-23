@@ -88,11 +88,12 @@
         </ng-template>
 
         <!-- Eğer login:false ise login/register görünsün -->
+        
         <ng-template #loggedOut>
           <li class="nav-item dropdown">
             <a
               class="nav-link dropdown-toggle"
-              href="#"
+              href="#" 
               id="dropdownId"
               data-bs-toggle="dropdown"
               aria-haspopup="true"
@@ -100,8 +101,8 @@
               >Login</a
             >
             <div class="dropdown-menu" aria-labelledby="dropdownId">
-              <a class="dropdown-item" href="login">Login</a>
-              <a class="dropdown-item" href="register">Register</a>
+              <a class="dropdown-item" routerLink="/login">Login</a> 
+              <a class="dropdown-item" routerLink="/register">Register</a>
             </div>
           </li>
         </ng-template>

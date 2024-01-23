@@ -3,7 +3,7 @@ import { AlertifyMessageService } from './alertify-message.service';
 import { Injectable, OnInit } from '@angular/core';
 
 // Api icin
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 
 // RxJS
 import { Observable, catchError, tap, throwError } from 'rxjs';
@@ -39,7 +39,7 @@ export class UserRegisterService implements OnInit {
     // throw new Error('Method not implemented.');
   }
 
-  //serviste sadece observable nesnesinin bir instanceı yapılmalı. Subscribe ilgili .ts dosyasından
+    //serviste sadece observable nesnesinin bir instanceı yapılmalı. Subscribe ilgili .ts dosyasından
   //api list
   //Observable dönecek ve türü UserRegister olacaktır.
   userListRegisterObservable(): Observable<UserRegister[]> {
@@ -53,6 +53,23 @@ export class UserRegisterService implements OnInit {
       catchError(this.observableUserRegisterCatchErrorHandling)
     );
   } //end User Register List Api
+
+  createListRegisterObservable(UserRegister:UserRegister): Observable<UserRegister> {
+
+      const headerHttpOptions={
+        headers:new HttpHeaders({
+          "Content-Type":"application/json",
+        })
+      }
+
+    return this.httpClient.post<UserRegister>(this.path,UserRegister).pipe(
+      tap((response) => {
+        console.log(response);
+        console.log(JSON.stringify(response));
+      }),
+      catchError(this.observableUserRegisterCatchErrorHandling)
+    );
+  }
 
   // Error Handling
   observableUserRegisterCatchErrorHandling(err: HttpErrorResponse) {
