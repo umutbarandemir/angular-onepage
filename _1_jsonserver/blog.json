@@ -1,25 +1,67 @@
 {
-    "user":[
-        {
-            "id":1,"username":"baran","email":"baran292907@hotmail.com","password":"12345667","date":"2024"
-        },
-        {
-            "id":2,"username":"berfin","email":"deneme@hotmail.com","password":"12345667","date":"2024"
-        },
-        {
-            "id":3,"username":"lili","email":"deneme2@hotmail.com","password":"12345667","date":"2024"
-        },
-        {
-            "id":4,"username":"ahmet","email":"deneme3@hotmail.com","password":"12345667","date":"2024"
-        },
-        {
-            "id":5,"username":"hasan","email":"deneme4@hotmail.com","password":"12345667","date":"2024"
-        }
-    ],
-
-    "blog":[
-        {
-            "id":1,"title":"Test Title","content":"content test"
-        }
-    ]
+  "user": [
+    {
+      "id": "1",
+      "username": "baran",
+      "email": "baran292907@hotmail.com",
+      "password": "12345667",
+      "date": "2024"
+    },
+    {
+      "id": "2",
+      "username": "berfin",
+      "email": "deneme@hotmail.com",
+      "password": "12345667",
+      "date": "2024"
+    },
+    {
+      "id": "3",
+      "username": "lili",
+      "email": "deneme2@hotmail.com",
+      "password": "12345667",
+      "date": "2024"
+    },
+    {
+      "id": "4",
+      "username": "ahmet",
+      "email": "deneme3@hotmail.com",
+      "password": "12345667",
+      "date": "2024"
+    },
+    {
+      "id": "5",
+      "username": "hasan",
+      "email": "deneme4@hotmail.com",
+      "password": "12345667",
+      "date": "2024"
+    },
+    {
+      "id": 0,
+      "username": "tuğberk",
+      "email": "tuğberk@hotmail.com",
+      "password": "7653221",
+      "date": ""
+    },
+    {
+      "id": 0,
+      "username": "tolga",
+      "email": "tolga@hotmail.com",
+      "password": "56456456456",
+      "date": ""
+    },
+    {
+      "id": 104,
+      "username": "ayhan",
+      "email": "ayhan@hotmail.com",
+      "password": "23232323",
+      "date": "Tue Jan 23 2024 13:26:38 GMT+0300 (GMT+03:00)"
+    }
+  ],
+  "blog": [
+    {
+      "id": "1",
+      "title": "Test Title",
+      "content": "content test"
+    }
+  ]
 }

@@ -38,6 +38,9 @@ export class RegisterComponent implements OnInit{
     const formData = form.value.username+ " "+ form.value.email+" "+form.value.password;
     this.AlertifyMessageService.alertSuccess(formData);
 
+    this.usercreate.id = Number(Math.floor(Math.random()*1000+1));
+    this.usercreate.date = String(new Date());
+
     this.UserRegisterService.createListRegisterObservable(this.usercreate).subscribe(response=>{
       this.AlertifyMessageService.alertSuccess(form+" Added.");
       form.reset();
