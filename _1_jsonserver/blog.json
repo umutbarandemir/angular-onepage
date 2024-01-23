@@ -1,0 +1,25 @@
+{
+    "user":[
+        {
+            "id":1,"username":"baran","email":"baran292907@hotmail.com","password":"12345667","date":"2024"
+        },
+        {
+            "id":2,"username":"berfin","email":"deneme@hotmail.com","password":"12345667","date":"2024"
+        },
+        {
+            "id":3,"username":"lili","email":"deneme2@hotmail.com","password":"12345667","date":"2024"
+        },
+        {
+            "id":4,"username":"ahmet","email":"deneme3@hotmail.com","password":"12345667","date":"2024"
+        },
+        {
+            "id":5,"username":"hasan","email":"deneme4@hotmail.com","password":"12345667","date":"2024"
+        }
+    ],
+
+    "blog":[
+        {
+            "id":1,"title":"Test Title","content":"content test"
+        }
+    ]
+}

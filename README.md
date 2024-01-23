@@ -26,13 +26,21 @@ Non-Case Sensitive (Html,Css,SQL)
 > npm -v
 > npm version
 > npm list -g
+>
 > npm install -g typescript
 > npm install -g @angular/cli
 > npm install alertifyjs
 > npm install bootstrap
+> npm install alertifyjs bootstrap jquery
 > npm install font-awesome
 > npm install jquery
+>
+> npm install -g json-server
 > npm install json-server
+> 
+> npm i -g express mongoose dotenv body-parser
+> npm i express mongoose dotenv body-parser --save
+>
 > ng version
 > ng v
 > ng new one-page
@@ -45,6 +53,18 @@ Non-Case Sensitive (Html,Css,SQL)
 > ng serve -o --port 9999  
 > ng --help
 ```
+
+## Projeleri Working
+- ng serve -o --port 1111  (ANGULAR)
+-
+- tsc UserRegister.ts
+- tsc -w UserRegister.ts
+- 
+- json-server --watch blog.json (JSON-SERVER)
+- json-server --watch blog.json --port 2222 (JSON-SERVER)
+- http://localhost:2222/user
+- 
+- npm nodemon start    (Node JS)
 
 ## Proje Serve
 ```sh
@@ -291,7 +311,5 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
